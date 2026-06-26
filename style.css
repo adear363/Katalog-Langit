@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +72,7 @@ header .subtitle {
     opacity: 0.9;
 }
 
-/* FIXED: Desain Kotak Placeholder jika foto belum di-upload */
+
 .image-placeholder {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -86,27 +85,24 @@ header .subtitle {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* ========================================================
-   FIXED: STRUKTUR JENDELA POP-UP (LIGHTBOX)
-   ======================================================== */
+
 .lightbox-modal {
-    display: none; /* Tersembunyi sebelum diklik */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 37, 28, 0.95); /* Cokelat gelap oasis murni */
+    background-color: rgba(46, 37, 28, 0.95); 
     align-items: center;
     justify-content: center;
 }
 
-/* FIXED: Ukuran Foto Full saat Pop-up muncul */
 .modal-content {
     max-width: 85%;
     max-height: 85vh;
-    object-fit: contain; /* Foto full-size asli, tidak terpotong kotak! */
+    object-fit: contain; 
     border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -126,14 +122,14 @@ header .subtitle {
     color: #FFB901; 
 }
 
-/* Info kartu foto */
+
 .item-info {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    margin-top: auto; /* Memastikan info nempel di bawah kartu */
+    margin-top: auto; 
 }
 
 .item-info h3 {
@@ -162,5 +158,5 @@ footer {
     text-align: center;
     padding: 40px 0 20px 0;
     font-size: 0.85rem;
-    color: #738B6C;
+    color: #7FBDC7;
 }
