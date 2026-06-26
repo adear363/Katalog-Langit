@@ -13,9 +13,8 @@
         <p class="subtitle">Koleksi sudut langit, alam, dan keindahannya. You can use for personal purpose only not commercial.</p>
         <p class="subtitle">Dikelola oleh @avcintiaaa_</p>
     
-        <div class="search-cointainer"><span
-        class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Cari foto langit (misal: Golden, sunset...)" onkeyup="searchPhotos()"> 
+        <div class="search-box"><input
+        type="text" id="searchInput" placeholder="🔍 misal: Golden, sunset..." onkeyup="searchPhotos()"> 
         </div>
     </header>
 
@@ -84,38 +83,15 @@
     </script>
 
     <script>
-        function openModal(imageSrc) {
-            var modal = document.getElementById("skyModal");
-            var modalImg = document.getElementById("imgFullView");
-            modal.style.display = "flex";
-            modalImg.src = imageSrc;
-        }
-
-        function closeModal() {
-            var modal = document.getElementById("skyModal");
-            modal.style.display = "none";
-        }
-
         function searchPhotos() {
-            var input = document.getElementById("searchInput");
-            var filter = input.value.toLowerCase();
-            
-            var container = document.querySelector(".gallery-container");
-            var items = container.getElementsByClassName("gallery-item");
+    let filter = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll(".gallery-item");
 
-            for (var i = 0; i < items.length; i++) {
-                var titleElement = items[i].getElementsByTagName("h3")[0];
-                if (titleElement) {
-                    var txtValue = titleElement.textContent || titleElement.innerText;
-                    
-                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                        items[i].style.display = "flex"; 
-                    } else {
-                        items[i].style.display = "none"; 
-                    }
-                }
-            }
-        }
+    items.forEach(item => {
+        let title = item.querySelector("h3").innerText.toLowerCase();
+        item.style.display = title.includes(filter) ? "flex" : "none";
+    });
+}
     </script>
 
 </body> </html>
