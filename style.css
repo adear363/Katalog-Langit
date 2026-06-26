@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: linear-gradient(135deg, #c3cad3 0%, #809094 40%, #1e2e27 100%);
+    background-color: linear-gradient(135deg, #c3cad3 20%, #809094 60%, #3d4d4b 100%);
     background-attachment: fixed;
     color: #ffffff;
     padding: 20px;
@@ -32,7 +32,7 @@ header .logo {
 
 header .subtitle {
     font-size: 0.95rem;
-    color: #e0e0e0;
+    color: #1e2e27;
     margin-top: 8px;
     letter-spacing: 0.3px;
     opacity: 0.95;
