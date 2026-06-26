@@ -6,12 +6,9 @@
 }
 
 body {
-    background-color: #E0E0EA; 
-    background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), rgba(0,0,0,0.05)),
-    repeating-linear-gradient(45deg, rgba(115, 139, 108, 0.03) 0px, rgba(115, 139, 108, 0.03) 1px, transparent 1px, transparent 11px);
-    background-size: 100% 100%, 12p 12px, 12px 12px;
+    background-color: linear-gradient(135deg, #c3cad3 0%, #809094 40%, #1e2e27 100%);
     background-attachment: fixed;
-    color: #4A4A4A;
+    color: #ffffff;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -35,7 +32,7 @@ header .logo {
 
 header .subtitle {
     font-size: 0.95rem;
-    color: #60705b;
+    color: #e0e0e0;
     margin-top: 8px;
     letter-spacing: 0.3px;
     opacity: 0.95;
