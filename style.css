@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -57,10 +58,22 @@ header .subtitle {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.image-placeholder {
+/* Mengatur Frame Gambar agar Kotak Sempurna (1:1) */
+.gallery-item img, .image-placeholder {
     width: 100%;
-    height: 350px; 
-    background-color: #7FBDC7; 
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.gallery-item img:hover, .image-placeholder:hover {
+    opacity: 0.9;
+}
+
+/* Penyelamat kotak placeholder jika foto belum dimuat */
+.image-placeholder {
+    background-color: #7FBDC7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +82,48 @@ header .subtitle {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* ========================================================
+   FIXED: KODE UNTUK MODAL POP-UP (SUDAH DI-SERVIS)
+   ======================================================== */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 37, 28, 0.9); /* Fixed typo & semicolon */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh; /* Fixed semicolon */
+    border-radius: 8px; /* Fixed semicolon */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Fixed spacing & alpha value */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #FFB901; 
+}
+
+/* Info & Tombol */
 .item-info {
     padding: 20px;
     display: flex;
@@ -82,7 +137,6 @@ header .subtitle {
     font-weight: 600;
     color: #333;
 }
-
 
 .btn-download {
     background-color: #738B6C; 

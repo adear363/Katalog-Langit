@@ -17,7 +17,7 @@
     <main class="gallery-container">
         
         <div class="gallery-item">
-            <img src="golden-hour-comfort.jpeg" alt="Golden Hour Comfort">
+            <img src="golden-hour-comfort.jpeg" alt="Golden Hour Comfort" onclick="openModal('langit-senja.jpg')">
 
             <div class="item-info">
                 <h3>Golden Hour Comfort</h3>
@@ -54,6 +54,29 @@
                 <a href="#" class="btn-download" download>Unduh</a>
             </div>
         </div>
+
+        <!-- Elemen Modal Pop-up untuk melihat foto Full -->
+    <div id="skyModal" class="lightbox-modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgFullView">
+    </div>
+
+    <!-- Script JavaScript Singkat untuk Logic Klik -->
+    <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("skyModal");
+            var modalImg = document.getElementById("imgFullView");
+            
+            modal.style.display = "flex"; // Tampilkan modal
+            modalImg.src = imageSrc;      // Masukkan foto full sesuai yang diklik
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("skyModal");
+            modal.style.display = "none"; // Sembunyikan kembali modal
+        }
+    </script>
+</body>
 
     </main>
 
