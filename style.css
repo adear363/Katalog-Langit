@@ -7,6 +7,10 @@
 
 body {
     background-color: #E0E0EA; 
+    background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), rgba(0,0,0,0.05)),
+    repeating-linear-gradient(45deg, rgba(115, 139, 108, 0.03) 0px, rgba(115, 139, 108, 0.03) 1px, transparent 1px, transparent 11px);
+    background-size: 100% 100%, 12p 12px, 12px 12px;
+    background-attachment: fixed;
     color: #4A4A4A;
     padding: 20px;
     display: flex;
