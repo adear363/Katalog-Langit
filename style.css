@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Plus Jakarta Sand', sans-serif;
 }
 
 body {
@@ -16,20 +16,25 @@ body {
 
 header {
     text-align: center;
-    margin: 40px 0;
+    margin: 50px 0 30px 0;
 }
 
 header .logo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
     color: #738B6C; 
+    margin-bottom: 5px
 }
 
 header .subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #60705b;
-    margin-top: 8px;
+    margin-top: 5px;
+    letter-spacing: 0.3px;
+    opacity: 0.85;
 }
 
 .search-box {
