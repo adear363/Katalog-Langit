@@ -33,6 +33,7 @@ header .subtitle {
     margin-top: 8px;
 }
 
+/* Container Grid Utama */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -58,21 +59,24 @@ header .subtitle {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Mengatur Frame Gambar agar Kotak Sempurna (1:1) */
-.gallery-item img, .image-placeholder {
+/* FIXED: Frame Kotak 1:1 HANYA untuk foto di dalam kartu katalog */
+.gallery-item img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     cursor: pointer;
     transition: opacity 0.2s ease;
+    display: block;
 }
 
-.gallery-item img:hover, .image-placeholder:hover {
+.gallery-item img:hover {
     opacity: 0.9;
 }
 
-/* Penyelamat kotak placeholder jika foto belum dimuat */
+/* FIXED: Desain Kotak Placeholder jika foto belum di-upload */
 .image-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background-color: #7FBDC7;
     display: flex;
     align-items: center;
@@ -83,29 +87,28 @@ header .subtitle {
 }
 
 /* ========================================================
-   FIXED: KODE UNTUK MODAL POP-UP (SUDAH DI-SERVIS)
+   FIXED: STRUKTUR JENDELA POP-UP (LIGHTBOX)
    ======================================================== */
 .lightbox-modal {
-    display: none;
+    display: none; /* Tersembunyi sebelum diklik */
     position: fixed;
-    z-index: 999;
-    padding-top: 40px;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 37, 28, 0.9); /* Fixed typo & semicolon */
+    background-color: rgba(46, 37, 28, 0.95); /* Cokelat gelap oasis murni */
     align-items: center;
     justify-content: center;
 }
 
+/* FIXED: Ukuran Foto Full saat Pop-up muncul */
 .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80vh; /* Fixed semicolon */
-    border-radius: 8px; /* Fixed semicolon */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Fixed spacing & alpha value */
+    max-width: 85%;
+    max-height: 85vh;
+    object-fit: contain; /* Foto full-size asli, tidak terpotong kotak! */
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .close-btn {
@@ -116,20 +119,21 @@ header .subtitle {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    user-select: none;
 }
 
 .close-btn:hover {
     color: #FFB901; 
 }
 
-/* Info & Tombol */
+/* Info kartu foto */
 .item-info {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    margin-top: auto; /* Memastikan info nempel di bawah kartu */
 }
 
 .item-info h3 {
