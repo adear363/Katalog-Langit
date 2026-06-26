@@ -32,7 +32,44 @@ header .subtitle {
     margin-top: 8px;
 }
 
-/* Container Grid Utama */
+   .search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 30px auto 10px auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 20px 12px 45px; 
+    font-size: 0.95rem;
+    border: 2px solid #b8c4b2; 
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #4A4A4A;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+
+#searchInput:focus {
+    border-color: #738B6C; 
+    box-shadow: 0 4px 15px rgba(115, 139, 108, 0.15);
+}
+
+
+.search-icon {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: #738B6C;
+    pointer-events: none; 
+}
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
