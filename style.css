@@ -30,11 +30,11 @@ header .logo {
 }
 
 header .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #60705b;
-    margin-top: 5px;
+    margin-top: 8px;
     letter-spacing: 0.3px;
-    opacity: 0.85;
+    opacity: 0.95;
 }
 
 .search-box {
